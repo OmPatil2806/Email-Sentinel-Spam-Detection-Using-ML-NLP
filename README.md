@@ -1,52 +1,129 @@
-# Email-Sentinel-Spam-Detection-Using-ML-NLP
+# 📧 Email Sentinel: Spam Detection Using Machine Learning & NLP
 
-
-## 📌 Project Overview
-This project implements an **email spam detection system** using Natural Language Processing (NLP) and Machine Learning. It classifies emails as **spam** or **ham (non-spam)** using a combination of text preprocessing, feature engineering, and machine learning models. The workflow includes:
-
-- Text cleaning, tokenization, lemmatization, and stopword removal  
-- Feature engineering: total words, message length, capitalized words, spam keywords, rare words   
-- Handling class imbalance using **SMOTE**  
-- Model training using **Logistic Regression** and **Multinomial Naive Bayes**  
-- Model evaluation using **Accuracy, Precision, Recall, F1-score, Confusion Matrix, and ROC Curve**  
-- Saving trained models for future use
+A complete end-to-end machine learning project that detects spam emails using text preprocessing, feature extraction, and classification algorithms.  
+This project includes exploratory data analysis (EDA), text cleaning, TF-IDF vectorization, model training, evaluation, and model export.
 
 ---
 
-## 📊 Data Source
-The dataset used in this project is publicly available on **Kaggle**:  
-[Email Spam Dataset on Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
+## 🚀 Project Overview
 
-The dataset contains word frequencies from emails along with a `Prediction` column indicating spam (1) or non-spam (0).
-
----
-
-## 🛠️ Tools & Libraries
-- **Python 3.x**  
-- **Data Handling:** Pandas, NumPy  
-- **Visualization:** Matplotlib, Seaborn, WordCloud  
-- **NLP & Text Processing:** NLTK, TextBlob  
-- **Machine Learning:** Scikit-learn (Logistic Regression, Multinomial Naive Bayes)  
-- **Data Balancing:** Imbalanced-learn (SMOTE)  
+Spam emails continue to be a serious cybersecurity threat, containing scams, phishing attempts, and malicious links.  
+This project builds a robust **spam detection pipeline** capable of classifying email messages as **Spam** or **Not Spam** using Machine Learning + Natural Language Processing (NLP).
 
 ---
 
-## 🧰 Models Used
-- **Logistic Regression** – predicts spam using TF-IDF and engineered features  
-- **Multinomial Naive Bayes** – suitable for count-based text features  
+## 🎯 Project Objectives
 
-Both models are trained, evaluated, and saved as `.pkl` files for future use.
+- Clean and preprocess raw email text data  
+- Extract meaningful numerical features using **TF-IDF**  
+- Handle class imbalance with **SMOTE**  
+- Train and compare multiple ML models  
+- Evaluate performance using accuracy, confusion matrix & ROC-AUC  
+- Save trained models for deployment  
+
+---
+
+## 🧭 Workflow Summary
+
+### **1. Data Loading & Cleaning**
+
+### **2. Text Preprocessing (NLP):**
+- Lowercasing  
+- Stopword removal  
+- Tokenization  
+- Lemmatization  
+
+### **3. Feature Engineering**
+- TF-IDF vectorization  
+- SMOTE oversampling for imbalance  
+
+### **4. Model Training**
+- Logistic Regression  
+- Multinomial Naive Bayes  
+
+### **5. Evaluation Metrics**
+- Accuracy  
+- Precision, Recall, F1  
+- Confusion Matrix  
+- ROC Curve & AUC Score  
+
+### **6. Model Export**
+- Exported using **Joblib** (`.pkl` files)
+
+---
+
+## 🤖 Machine Learning Models Used
+
+### **1️⃣ Logistic Regression**
+- Solver: `liblinear`  
+- Max Iterations: 2000  
+- Stable, interpretable, highly effective for high-dimensional sparse text data  
+
+### **2️⃣ Multinomial Naive Bayes**
+- Excellent for text classification  
+- Extremely fast  
+- Works best with TF-IDF and word frequency data  
+
+---
+
+## 📊 Model Performance (Results)
+
+### **Logistic Regression**
+- ✔ High Accuracy  
+- ✔ Strong ROC-AUC Score  
+- ✔ Balanced learning after SMOTE  
+
+### **Multinomial Naive Bayes**
+- ✔ Fastest training  
+- ✔ High performance on TF-IDF data  
+- ✔ Competitive AUC score  
+
+### **Visual Results**
+- Confusion Matrix for both models  
+- ROC Curve comparing LR vs NB  
+- AUC values displayed on plots  
+
+### **Exported Models**
+
+| Model                | File Name                         |
+|---------------------|-----------------------------------|
+| Logistic Regression | `logistic_regression_model.pkl`   |
+| Naive Bayes         | `naive_bayes_model.pkl`           |
+
+---
+
+## 🛠 Tools & Technologies
+
+### **Programming Language**
+- Python
+
+### **Core Libraries**
+- **pandas** – Data handling  
+- **numpy** – Numerical operations  
+- **matplotlib / seaborn** – Visualization  
+- **sklearn** – ML models, evaluation, vectorization  
+- **SMOTE (imblearn)** – Class balancing  
+- **joblib** – Saving models  
+
+---
+
+## 🔮 Future Improvements
+
+- Add more NLP features (bigrams, trigrams)  
+- Integrate Deep Learning models (LSTM, BERT)  
+- Build a REST API for deployment  
+- Create a Streamlit UI for live email classification  
+
+---
+
+## 🙌 Contributions
+
+Contributions are welcome!  
+Feel free to open issues, fork the repo, and submit pull requests.
 
 ---
 
 
-## 📈 Visualization
-- Word clouds for spam emails  
-- Histograms and boxplots for message length distribution  
-- Confusion matrices for model performance  
-- ROC curves to compare models  
-
----
 
 ## 👤 Author
 **Om Patil**  
